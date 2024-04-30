@@ -16,11 +16,11 @@ public class Elephant extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-1);
+            move(-2);
         }
         else if (Greenfoot.isKeyDown("right"))
         {
-            move(1);
+            move(2);
         }
         
         // Remove apple if elephant eats it
