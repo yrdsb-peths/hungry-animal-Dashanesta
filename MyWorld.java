@@ -18,10 +18,22 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         
+        
+        // Create the elephant object
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 200);
         
+        createApple();
+    }
+    
+    /**
+     * Create a new apple at random location at top of screen
+     */
+    public void createApple()
+    {
         Apple apple = new Apple();
-        addObject(apple, 300, 0);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
     }
 }
