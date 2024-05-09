@@ -40,9 +40,9 @@ public class TitleScreen extends World
     {
         Label titleLabel = new Label("Hungry Elephant", 80);
         addObject(titleLabel, getWidth()/2, 200);
-        Label label = new Label("Press <-- and --> to move", 40);
+        Label label = new Label("Press \u2190 and \u2192 to move", 40);
         addObject(label,getWidth()/2,270);
-        Label label2 = new Label("Press <space> to start!", 40);
+        Label label2 = new Label("Press \u2423 to start!", 40);
         addObject(label2,getWidth()/2,320);
         Elephant elephant = new Elephant();
         addObject(elephant,450,95);
