@@ -4,12 +4,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The World our hero lives in.
  * 
  * @author Shane DG
- * @version April 2024
+ * @version May 2024
  */
 public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
+    public int lives = 3;
+    Label livesLabel;
     int level = 1;
     
     /**
@@ -26,11 +28,15 @@ public class MyWorld extends World
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 300);
         
-        // Create a label
+        // Create labels
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
+        livesLabel = new Label("Lives: 3", 50);
+        addObject(livesLabel, 500, 30);
+        
         createApple();
+        createSpider();
     }
     
     /**
@@ -40,6 +46,8 @@ public class MyWorld extends World
     {
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        
+        Greenfoot.stop();
     }
     
     /**
@@ -50,10 +58,31 @@ public class MyWorld extends World
         score++;
         scoreLabel.setValue(score);
         
-        if((level*score - score) % 10 == 0)
+        if((level*score - score) % 30 == 0)
         {
             level++;
         }
+    }
+    
+    /**
+     * Decrease score
+     */
+    public void decreaseScore()
+    {
+        if(score>0)
+        {
+            score--;            
+        }
+        scoreLabel.setValue(score);
+    }
+    
+    /**
+     * Lose a life
+     */
+    public void lostLife()
+    {
+        lives--;
+        livesLabel.setValue("Lives: " + lives);
     }
     
     /**
@@ -66,5 +95,17 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    /**
+     * Create a new spider at random location at top of screen
+     */
+    public void createSpider()
+    {
+        Spider spider = new Spider();
+        spider.setSpeed((level+1)/2);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = -25;
+        addObject(spider, x, y);
     }
 }

@@ -44,9 +44,11 @@ public class TitleScreen extends World
         addObject(label,getWidth()/2,270);
         Label label2 = new Label("Press \u2423 to start!", 40);
         addObject(label2,getWidth()/2,320);
-        Elephant elephant = new Elephant();
-        addObject(elephant,450,95);
-        Elephant elephant2 = new Elephant();
-        addObject(elephant2,150,95);
+        GreenfootImage elephant = new GreenfootImage("images/elephant_idle/idle0.png");
+        elephant.scale(100, 100);
+        this.getBackground().drawImage(elephant, 50, 50);
+        GreenfootImage apple = new GreenfootImage("images/apple.png");
+        apple.scale(87, 90);
+        this.getBackground().drawImage(apple, 450, 55);
     }
 }

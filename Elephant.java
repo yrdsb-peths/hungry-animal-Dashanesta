@@ -81,6 +81,10 @@ public class Elephant extends Actor
         
         // Animate the elephant
         animateElephant();
+        
+        // End game when no lives remain
+        MyWorld world = (MyWorld) getWorld();
+        if(world.lives == 0) world.gameOver();
     }
     
     /**
@@ -95,6 +99,13 @@ public class Elephant extends Actor
             world.createApple();
             world.increaseScore();
             elephantSound.play();
+        } else if(isTouching(Spider.class))
+        {
+            removeTouching(Spider.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.decreaseScore();
+            elephantSound.play();
+            world.createSpider();
         }
     }
 }

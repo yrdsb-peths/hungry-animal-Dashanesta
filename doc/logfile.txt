@@ -20,19 +20,18 @@ C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\do
 windows-1252
 -charset
 windows-1252
-C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\SimpleTimer.java
+C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\MyWorld.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\SimpleTimer.java...
+Loading source file C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\MyWorld.java...
 Constructing Javadoc information...
+warning: unknown enum constant Tag.Any
+  reason: class file for threadchecker.Tag not found
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
 Standard Doclet version 17.0.4.1+1
 Building tree for all the packages and classes...
-Generating C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\doc\SimpleTimer.html...
-C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\SimpleTimer.java:24: warning: invalid input: '&'
- * if (timer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space"))
-                                    ^
-C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\SimpleTimer.java:24: warning: invalid input: '&'
- * if (timer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space"))
-                                     ^
+Generating C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\doc\MyWorld.html...
 Generating C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\doc\package-summary.html...
 Generating C:\Users\shane\OneDrive\Documents\GitHub\Grade 11 CS\hungry-animal-Dashanesta\doc\index.html...
-2 warnings
+4 warnings

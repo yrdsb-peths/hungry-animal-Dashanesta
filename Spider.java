@@ -1,32 +1,40 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Food for our elephant.
+ * When a spider is eaten, score is decremented.
  * 
  * @author Shane DG
  * @version May 2024
  */
-public class Apple extends Actor
+public class Spider extends Actor
 {
     int speed = 1;
-    
+    int delay = 100;
     public void act()
     {
-        // Apple falls
+        if (delay > 0) {
+            delay--;
+            return;
+        }
+        // Spider falls
         setLocation(getX(), getY() + speed);
         
-        // Remove apple and draw game over when apple gets to bottom
+        // Remove spider and draw game over when apple gets to bottom
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
         {
-            world.lostLife();
             world.removeObject(this);
-            world.createApple();
+            world.createSpider();
         }
     }
     
     public void setSpeed(int spd)
     {
         speed = spd;
+    }
+    
+    public void setDelay(int loops)
+    {
+        delay = loops;
     }
 }
